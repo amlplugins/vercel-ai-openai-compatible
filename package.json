@@ -1,0 +1,44 @@
+{
+  "name": "@amlplugins/vercel-ai-openai-compatible",
+  "version": "0.0.1",
+  "description": "Native @ai-sdk/openai-compatible SDK re-exported under the @amlplugins namespace — Vercel AI SDK OpenAI-compatible provider — generic adapter for any OpenAI-API-compatible endpoint.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^2.0.47",
+    "ai": "^6.0.184"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amlplugins/vercel-ai-openai-compatible.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}
